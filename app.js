@@ -19,6 +19,15 @@ app.get('/todo', function(req, res) {
     res.redirect('/todo');
 })
 
+.post('/todo/edit/:id', urlencodedParser, function(req, res) {
+  console.log(req.body)
+  if (req.body.edittodo != '') {
+    todolist[req.params.id] = req.body.edittodo;
+  }
+
+  res.redirect('/todo');
+})
+
 /* Deletes an item from the to do list */
 .get('/todo/delete/:id', function(req, res) {
     if (req.params.id != '') {

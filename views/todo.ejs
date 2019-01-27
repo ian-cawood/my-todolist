@@ -12,7 +12,16 @@
         <h1>My todolist</h1>
         <ul>
         <% todolist.forEach(function(todo, index) { %>
-            <li><a href="/todo/delete/<%= index %>">✘</a> <%- todo %></li>
+            <li>
+              <a href="/todo/delete/<%= index %>">✘</a> <%- todo %>
+              <form action="/todo/edit/<%= index %>" method="post">
+                <p>
+                  <label for="edittodo">Edit your todo</label>
+                  <input type="text" name="edittodo" id="edittodo" autofocus placeholder="<%- todo %>" />
+                  <input type="submit" />
+                </p>
+              </form>
+            </li>
         <% }); %>
         </ul>
 
