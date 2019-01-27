@@ -1,11 +1,20 @@
 {
   "name": "my-todolist",
   "version": "0.1.0",
+  "scripts": {
+    "test": "mocha --opts mocha.opts"
+  },
   "dependencies": {
     "body-parser": "^1.16.0",
     "ejs": "^2.5.5",
     "express": "^4.14.0"
   },
   "author": "riaan@entersekt.com",
-  "description": "Basic to do list exercise"
+  "description": "Basic to do list exercise",
+  "devDependencies": {
+    "chai": "^4.2.0",
+    "chai-http": "^4.2.1",
+    "js-parametrize": "0.0.2",
+    "mocha": "^5.2.0"
+  }
 }

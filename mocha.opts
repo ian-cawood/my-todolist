@@ -1,0 +1,4 @@
+--exit
+--recursive
+--watch-extensions js
+*.test.js

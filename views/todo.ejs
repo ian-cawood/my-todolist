@@ -13,7 +13,7 @@
         <ul>
         <% todolist.forEach(function(todo, index) { %>
             <li>
-              <a href="/todo/delete/<%= index %>">✘</a> <%- todo %>
+              <a href="/todo/delete/<%= index %>">✘</a> <b><%- todo %></b>
               <form action="/todo/edit/<%= index %>" method="post">
                 <p>
                   <label for="edittodo">Edit your todo</label>
