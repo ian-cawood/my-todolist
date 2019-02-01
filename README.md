@@ -1,17 +1,46 @@
 # Todo list exercise
 
-### Install
+### Dependencies
+> [Node](https://nodejs.org/en/)
+> [Docker](https://docs.docker.com/install/)
 
-- Install https://nodejs.org/en/
-- Download archive from link provided
-- Unzip file and cd into it
-- run `npm install`
+For this project to run properly you will need docker and docker-compose running on your environment. The specific install path depends on your environment.
 
-### Run
-`node app.js`
+### Starting the app
 
-Visit http://localhost:8080 in your browser
+#### With docker compose
+This will start build the docker image if needed and start the container.
+`docker-compose up` or
+`npm run start:docker`
 
+#### Without docker compose
+This will install and start the server on local.
+`npm i && npm run start`
+
+Open the app with http://localhost:8080.
+
+### Debugging
+When the app is started in docker it will refresh on updates using nodemon and output can be seen in the container.
+
+### Tests
+Tests are integrated into the app and can be run in the container or outside(given you have node installed).
+
+#### In docker container
+Single run
+`docker-compose exec node npm run test`
+Watch mode
+`docker-compose exec node npm run test:watch`
+
+#### In local
+Single run
+`npm run test`
+Watch mode
+`npm run test:watch`
+With coverage
+`npm run test:coverage`
+
+### Tests
+s
 ### High level application requirements
 1. Multiple users should be able to view the shared public todo list
 2. Should be able to add items
@@ -31,6 +60,3 @@ Visit http://localhost:8080 in your browser
 > ### Notes
 > - Update the code as needed and document what you have done in the readme below
 > - Will be nice if you can git tag the tasks by number
-
-### Solution
-Explain what you have done here and why...

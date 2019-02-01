@@ -46,6 +46,6 @@ app.get('/todo', (_req, res) => {
   res.redirect('/todo');
 })
 
-.listen(8080);
+.listen(process.env.PORT || 8080);
 
 module.exports = app;

@@ -23,7 +23,7 @@ COPY package.json package-lock.json* ./
 RUN npm install --no-optional && npm cache clean --force
 ENV PATH /opt/node_modules/.bin:$PATH
 
-# - copt over source files
+# - copy over source files
 WORKDIR /opt/app
 COPY . /opt/app
 
